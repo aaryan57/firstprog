@@ -2,11 +2,11 @@ def dfs(graph, start, goal, visited=None, path=None, open_list=None, closed_list
     if visited is None:
         visited=set()
     if path is None:
-        path=[]
+        path = []
     if open_list  is None:
-        open_list=[]
+        open_list = []
     if closed_list is None:
-        closed_list=[]
+        closed_list = []
 
     visited.add(start)
     open_list.append(start)
@@ -21,7 +21,7 @@ def dfs(graph, start, goal, visited=None, path=None, open_list=None, closed_list
 
     for neighbour in graph[start]:
         if neighbour not in visited:
-            new_path=dfs(graph,neighbour,goal,visited,open_list,closed_list)
+            new_path = dfs(graph, neighbour, goal, visited, open_list, closed_list)
             if new_path:
                 return new_path
 
@@ -41,8 +41,8 @@ graph = {
     'H':[]
 }
 
-start_node=int(input("enter start node"))
-goal_node=int(input("enter goal"))
+start_node=input("enter start node")
+goal_node=input("enter goal")
 print("dfs")
 open_list = []
 closed_list = []
