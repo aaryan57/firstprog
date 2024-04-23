@@ -1,0 +1,4 @@
+int name = 10 + 10p;
+int i = name + 1;
+float j = i / name;
+float try = 3.23;
